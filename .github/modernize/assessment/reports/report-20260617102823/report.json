@@ -1,0 +1,444 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-06-17T10:28:23.202511283Z",
+    "analysisEndTime": "2026-06-17T10:28:45.971349637Z",
+    "status": "Complete",
+    "privacyMode": "Protected",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service"
+    ],
+    "capabilities": [
+      "openjdk25"
+    ],
+    "os": [
+      "linux",
+      "windows"
+    ],
+    "domains": [
+      "java-upgrade",
+      "cloud-readiness"
+    ],
+    "mode": "full",
+    "minimumCveSeverity": "high"
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 7,
+    "totalIncidents": 8,
+    "totalEffort": 41,
+    "charts": {
+      "severity": {
+        "mandatory": 6,
+        "optional": 2,
+        "potential": 0,
+        "information": 0
+      },
+      "category": {
+        "containerization": 1,
+        "framework-upgrade": 1,
+        "insecure-random": 1,
+        "java-version-upgrade": 2,
+        "local-resource-access": 1,
+        "remote-communication": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 7,
+      "storyPoints": 41,
+      "properties": {
+        "appName": "spring-boot-rest-example",
+        "jdkVersion": "1.8",
+        "frameworks": [
+          "Spring Boot",
+          "Spring"
+        ],
+        "languages": [
+          "Java",
+          "Python"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "azure-java-version-01000",
+          "incidentId": "c22ba692-22dd-44ac-8612-8d4072e3a52b",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 124,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-01000",
+          "incidentId": "9648099f-8d4f-47f6-b091-edfa2d8a6181",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 125,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "jakarta-ee-version-01000",
+          "incidentId": "7463b169-d0cd-48c3-b72e-36499791bb3f",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "line": 106,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "hardcoded-urls-00001",
+          "incidentId": "4e4bb9f6-0a81-4f20-b7cd-ba0f892148b0",
+          "location": "src/test/java/com/khoubyari/example/test/HotelControllerTest.java",
+          "locationKind": "File",
+          "line": 42,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "localhost-http-00001",
+          "incidentId": "eb063bd6-6a4f-48e1-a1d3-f7226c2b9ae9",
+          "location": "src/test/java/com/khoubyari/example/test/HotelControllerTest.java",
+          "locationKind": "File",
+          "line": 42,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "dockerfile-00000",
+          "incidentId": "9dc271bc-13d9-465b-81db-0dd242127216",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "cra-insecure-random-01000",
+          "incidentId": "91eef236-d502-4581-a1f1-a8474af6c5e6",
+          "location": "src/test/java/com/khoubyari/example/test/HotelControllerTest.java",
+          "locationKind": "File",
+          "line": 166,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 5,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 5,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "unsecure-network-protocol-00000",
+          "incidentId": "bbaa9d23-1728-499b-b620-76fa6ef93cc8",
+          "location": "src/test/java/com/khoubyari/example/test/HotelControllerTest.java",
+          "locationKind": "File",
+          "line": 42,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-appservice": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "azure-java-version-01000": {
+      "id": "azure-java-version-01000",
+      "description": "The application is using a Java version that has reached the end of support. It is strongly recommended to plan and execute a migration strategy to upgrade your application to a supported Java version.\nSupported Java versions receive long-term support (LTS) from the Java community, including bug fixes and updates. Migrating to a supported version provides you with a stable and well-maintained platform for your application.",
+      "title": "Java Version Has Reached the End of Support",
+      "severity": "mandatory",
+      "effort": 8,
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=java-upgrade",
+        "category=java-version-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "cra-insecure-random-01000": {
+      "id": "cra-insecure-random-01000",
+      "description": "**EU Cyber Resilience Act (Annex I, Part I, Section 2(c))** requires the use of **state of the art** cryptographic mechanisms, which includes the use of cryptographically secure random number generators (CSPRNG).\n\n`java.util.Random` uses a linear congruential generator (LCG) which is **not cryptographically secure**. Its output is predictable given enough observations, making it unsuitable for:\n- Token/session ID generation\n- Nonce/IV generation for encryption\n- Salt generation for password hashing\n- Any security-sensitive random value generation\n\n**Recommended actions:**\n* Replace `new Random()` with `new SecureRandom()` for any security-relevant random number generation.\n* Replace `Math.random()` with `SecureRandom.nextDouble()` for security use cases.\n* Replace `ThreadLocalRandom.current()` with `SecureRandom` for security contexts.\n* Use `java.security.SecureRandom` which provides a CSPRNG backed by the OS entropy source.",
+      "title": "CRA: Use of insecure random number generator java.util.Random",
+      "severity": "mandatory",
+      "effort": 5,
+      "links": [
+        {
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+          "title": "EU Cyber Resilience Act - Regulation (EU) 2024/2847"
+        },
+        {
+          "url": "https://cwe.mitre.org/data/definitions/330.html",
+          "title": "CWE-330 - Use of Insufficiently Random Values"
+        }
+      ],
+      "labels": [
+        "source",
+        "domain=cloud-readiness",
+        "category=insecure-random",
+        "security",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "dockerfile-00000": {
+      "id": "dockerfile-00000",
+      "description": "No Dockerfile was found in the project. This suggests the application may not yet be containerized. \nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.",
+      "title": "No Dockerfile found",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://www.baeldung.com/java-dockerize-app",
+          "title": "Dockerizing a Java Application"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=containerization",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "hardcoded-urls-00001": {
+      "id": "hardcoded-urls-00001",
+      "description": "This patterns verifies in source code and configuration files the presence of hardcoded URLs using the HTTP protocol (HTTP/HTTPS). This URL would need to be replaced by the new resource's URL during the Cloud migration, if any change occured.",
+      "title": "Avoid using hardcoded URLs (HTTP protocol) in source code",
+      "severity": "optional",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "source",
+        "domain=cloud-readiness",
+        "category=remote-communication",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "jakarta-ee-version-01000": {
+      "id": "jakarta-ee-version-01000",
+      "description": "Your application is not using the latest Jakarta EE version. \nUpgrading to the latest stable version ensures better performance, security, and compatibility with modern tools.\n  1. Pick a Supported Version: Review the Jakarta EE release versions and choose an actively supported version.\n  2. Update Your Project: Change the Jakarta EE version in your pom.xml or build.gradle.\n  3. Fix Compatibility Issues: Update deprecated code, replace removed features, and ensure dependencies are compatible with the new Jakarta EE version.\n  4. Thoroughly Test: Run unit, integration, and end-to-end tests to make sure everything still works after the upgrade.",
+      "title": "Jakarta EE Version is not the latest stable",
+      "severity": "optional",
+      "effort": 8,
+      "links": [
+        {
+          "url": "https://jakarta.ee/release/",
+          "title": "Jakarta EE Release Versions"
+        },
+        {
+          "url": "https://jakarta.ee/specifications/platform/",
+          "title": "Jakarta EE Platforms"
+        }
+      ],
+      "labels": [
+        "source",
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "domain=java-upgrade",
+        "category=framework-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "localhost-http-00001": {
+      "id": "localhost-http-00001",
+      "description": "The app is trying to access local resource by HTTP, please try to migrate the resource to cloud",
+      "title": "Local HTTP Calls",
+      "severity": "mandatory",
+      "effort": 3,
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=local-resource-access",
+        "localhost",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "unsecure-network-protocol-00000": {
+      "id": "unsecure-network-protocol-00000",
+      "description": "Using secured protocols such as HTTPS and SFTP (over HTTP and FTP) should now be the norm as applications are more and more exposed and interconnected. \nThis CloudReady patterns looks for unescured URI in the source code or deprecated URI libraries. \nIdeally, URLs should be replaced in your source code by secured protocols HTTPS and SFTP (and ensure the infrastructure implements these protocols for the resources your application calls, uses or references).",
+      "title": "Use of unsecured network protocols or URI libraries",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https",
+          "title": "Why HTTPS matters"
+        },
+        {
+          "url": "https://www.ssh.com/ssh/sftp/",
+          "title": "SSH File Transfer Protocol (SFTP): Get SFTP client & server"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "target=azure-appservice",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=remote-communication",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    }
+  }
+}
